@@ -16,11 +16,11 @@ public class EnemyJumpOn : MonoBehaviour
     {
         
     }
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.tag == "Enemy") 
         {
-            Destroy(gameObject);
+            Destroy(other.gameObject);
         }
     }
 
