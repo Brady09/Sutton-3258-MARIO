@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyJumpOn : MonoBehaviour
 {
-    
+    public Transform cube;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +20,7 @@ public class EnemyJumpOn : MonoBehaviour
     {
         if (other.tag == "Enemy") 
         {
-            Destroy(other.gameObject);
+            Destroy(other.transform.parent.gameObject);
         }
     }
 
